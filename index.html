@@ -41,11 +41,10 @@
         <div class="nav-section">
           <h2 class="nav-title">Playlists</h2>
           <ul class="playlist-menu">
-            <li class="playlist-link" data-playlist="electronic">Hip Hop</li>
-            <li class="playlist-link" data-playlist="ambient">Bollywood Hits</li>
-            <li class="playlist-link" data-playlist="classical">Classical Collection</li>
-            <li class="playlist-link" data-playlist="jazz">Jazz Essentials</li>
-            <li class="playlist-link" data-playlist="rock">Rock Classics</li>
+            <li class="playlist-link" data-playlist="hip-hop">Hip Hop</li>
+            <li class="playlist-link" data-playlist="bollywood-hits">Bollywood Hits</li>
+            <li class="playlist-link" data-playlist="marathi-hits">Marathi Hits</li>
+            <li class="playlist-link" data-playlist="playlist4">Custom Playlist</li>
           </ul>
         </div>
         
@@ -74,141 +73,54 @@
           </div>
 
           <div class="playlist-grid">
-            <div class="playlist-card" data-playlist="electronic">
+            <div class="playlist-card" data-playlist="hip-hop">
               <div class="playlist-art">
                 <img src="/images/hip-hop.jpg" alt="Hip Hop Playlist" class="playlist-image">
               </div>
               <div class="playlist-title">Hip Hop</div>
               <div class="playlist-info">15 tracks</div>
             </div>
-            <div class="playlist-card" data-playlist="ambient">
-              <div class="playlist-art">🎬</div>
+            <div class="playlist-card" data-playlist="bollywood-hits">
+              <div class="playlist-art">
+                <img src="/images/bollywood-hits.jpg" alt="Bollywood Hits Playlist" class="playlist-image">
+              </div>
               <div class="playlist-title">Bollywood Hits</div>
-              <div class="playlist-info">8 tracks</div>
+              <div class="playlist-info">14 tracks</div>
             </div>
-            <div class="playlist-card" data-playlist="classical">
-              <div class="playlist-art">🎹</div>
-              <div class="playlist-title">Classical Collection</div>
+            <div class="playlist-card" data-playlist="marathi-hits">
+              <div class="playlist-art">
+                <img src="/images/marathi-hits.jpg" alt="Marathi Hits Playlist" class="playlist-image">
+              </div>
+              <div class="playlist-title">Marathi Hits</div>
               <div class="playlist-info">15 tracks</div>
             </div>
-            <div class="playlist-card" data-playlist="jazz">
-              <div class="playlist-art">🎷</div>
-              <div class="playlist-title">Jazz Essentials</div>
-              <div class="playlist-info">10 tracks</div>
-            </div>
-            <div class="playlist-card" data-playlist="rock">
-              <div class="playlist-art">🎸</div>
-              <div class="playlist-title">Rock Classics</div>
-              <div class="playlist-info">14 tracks</div>
+            <div class="playlist-card" data-playlist="playlist4">
+              <div class="playlist-art">🎵</div>
+              <div class="playlist-title">Custom Playlist</div>
+              <div class="playlist-info">0 tracks</div>
             </div>
           </div>
 
           <div class="section-header">
-            <h2 class="section-title">Recently Played</h2>
+            <h2 class="section-title">Home</h2>
           </div>
-
-          <div class="track-list recent-tracks">
-            <div class="track-item" data-src="/audio/hip-hop/track1.mp3">
-              <div class="track-info">
-                <span class="track-number">01</span>
-                <div class="track-details">
-                  <div class="track-title">Blinding Lights</div>
-                  <div class="track-artist">The Weeknd</div>
-                </div>
-              </div>
-              <div class="track-duration">3:22</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track9.mp3">
-              <div class="track-info">
-                <span class="track-number">02</span>
-                <div class="track-details">
-                  <div class="track-title">Moonlight</div>
-                  <div class="track-artist">XXXTENTACION</div>
-                </div>
-              </div>
-              <div class="track-duration">2:15</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track10.mp3">
-              <div class="track-info">
-                <span class="track-number">03</span>
-                <div class="track-details">
-                  <div class="track-title">Not Like Us</div>
-                  <div class="track-artist">Kendrick Lamar</div>
-                </div>
-              </div>
-              <div class="track-duration">4:42</div>
-            </div>
+          <h3>Recently Played</h3>
+          <div class="recent-tracks">
+            <p>No tracks have been played yet.</p>
           </div>
         </section>
 
         <!-- Playlists Section -->
         <section id="playlists" class="section">
           <div class="section-header">
-            <h1 class="section-title">Hip Hop</h1>
+            <h2 class="section-title">Playlist 1</h2>
             <div class="playlist-meta">
-              <span class="playlist-description">Vibrant beats and rhymes from top Hip Hop artists</span>
-              <div class="playlist-actions">
-                <button class="btn-play-all">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                  Play All
-                </button>
-              </div>
+              <p class="playlist-description">Add your custom tracks to this playlist</p>
+              <button class="btn-play-all">Play All</button>
             </div>
           </div>
-          
           <div class="track-list">
-            <div class="track-item" data-src="/audio/hip-hop/track1.mp3">
-              <div class="track-info">
-                <span class="track-number">01</span>
-                <div class="track-details">
-                  <div class="track-title">Blinding Lights</div>
-                  <div class="track-artist">The Weeknd</div>
-                </div>
-              </div>
-              <div class="track-duration">3:22</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track2.mp3">
-              <div class="track-info">
-                <span class="track-number">02</span>
-                <div class="track-details">
-                  <div class="track-title">Die For You</div>
-                  <div class="track-artist">The Weeknd</div>
-                </div>
-              </div>
-              <div class="track-duration">4:20</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track3.mp3">
-              <div class="track-info">
-                <span class="track-number">03</span>
-                <div class="track-details">
-                  <div class="track-title">Everybody Dies In Their Nightmares</div>
-                  <div class="track-artist">XXXTENTACION</div>
-                </div>
-              </div>
-              <div class="track-duration">1:36</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track4.mp3">
-              <div class="track-info">
-                <span class="track-number">04</span>
-                <div class="track-details">
-                  <div class="track-title">FE!N</div>
-                  <div class="track-artist">Travis Scott feat. Playboi Carti</div>
-                </div>
-              </div>
-              <div class="track-duration">3:09</div>
-            </div>
-            <div class="track-item" data-src="/audio/hip-hop/track5.mp3">
-              <div class="track-info">
-                <span class="track-number">05</span>
-                <div class="track-details">
-                  <div class="track-title">God's Plan</div>
-                  <div class="track-artist">Drake</div>
-                </div>
-              </div>
-              <div class="track-duration">3:19</div>
-            </div>
+            <p>No tracks have been added to this playlist yet.</p>
           </div>
         </section>
       </main>
