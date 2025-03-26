@@ -195,11 +195,11 @@ function playTrack(trackElement) {
   const trackArtElement = document.querySelector('.track-art');
   
   if (currentPlaylist === 'hip-hop') {
-    trackArtElement.innerHTML = '<img src="/images/hip-hop.jpg" alt="Hip Hop" class="track-art-img">';
+    trackArtElement.innerHTML = '<img src="images/hip-hop.jpg" alt="Hip Hop" class="track-art-img">';
   } else if (currentPlaylist === 'bollywood-hits') {
-    trackArtElement.innerHTML = '<img src="/images/bollywood-hits.jpg" alt="Bollywood Hits" class="track-art-img">';
+    trackArtElement.innerHTML = '<img src="images/bollywood-hits.jpg" alt="Bollywood Hits" class="track-art-img">';
   } else if (currentPlaylist === 'marathi-hits') {
-    trackArtElement.innerHTML = '<img src="/images/marathi-hits.jpg" alt="Marathi Hits" class="track-art-img">';
+    trackArtElement.innerHTML = '<img src="images/marathi-hits.jpg" alt="Marathi Hits" class="track-art-img">';
   } else {
     trackArtElement.innerHTML = '<span class="track-art-emoji">🎵</span>';
   }
@@ -490,8 +490,8 @@ function createTrackElementWithNumberedFile(track, index, folderPath) {
   const trackElement = document.createElement('div');
   trackElement.className = 'track-item';
   
-  // Use track number for the file name
-  trackElement.dataset.src = `/audio/${folderPath}/track${index + 1}.mp3`;
+  // Use track number for the file name - Update to relative path
+  trackElement.dataset.src = `audio/${folderPath}/track${index + 1}.mp3`;
   
   trackElement.innerHTML = `
     <div class="track-info">
