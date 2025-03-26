@@ -500,13 +500,13 @@ function loadPlaylistTracks(playlistId) {
       const tracks = [
         { title: 'Apna Bana Le', artist: 'Arijit Singh', duration: '4:25' },
         { title: 'Baarishein', artist: 'Anuv Jain', duration: '3:30' },
-        { title: 'Heeriye (feat. Arijit Singh)', artist: 'Jasleen Royal', duration: '3:13' },
-        { title: 'Jo Tum Mere Ho', artist: 'Arijit Singh', duration: '4:10' },
-        { title: 'Maula Mere Maula', artist: 'Roop Kumar Rathod', duration: '6:03' },
-        { title: 'O Meri Laila', artist: 'Atif Aslam', duration: '4:40' },
-        { title: 'Softly', artist: 'Karan Aujla', duration: '2:36' },
-        { title: 'Suniyan Suniyan', artist: 'Arijit Singh', duration: '3:17' },
-        { title: 'Tum Ho', artist: 'Mohit Chauhan', duration: '5:16' }
+        { title: 'Dekhha Tenu (From "Mr. And Mrs. Mahi"))', artist: 'Jaani', duration: '4:41' },
+        { title: 'Heeriye (feat. Arijit Singh)', artist: 'Jasleen Royal; Arijit Singh; Dulquer Salmaan; ', duration: '3:14' },
+        { title: 'Husn', artist: 'Anuv Jain', duration: '3:37' },
+        { title: 'Jo Tum Mere Ho', artist: 'Anuv Jain', duration: '4:11' },
+        { title: 'Lambiya Judaiyan', artist: 'Bilal Saeed', duration: '3:12' },
+        { title: 'Tum Ho', artist: 'Mohit Chauhan', duration: '5:16' },
+        { title: 'Naina (From "Crew")', artist: 'Diljit Dosanjh; Badshah; Raj Ranjodh', duration: '3:00' }
       ];
       
       // Create HTML for each track with renamed files
@@ -516,16 +516,16 @@ function loadPlaylistTracks(playlistId) {
     } else if (playlistId === 'marathi-hits') {
       // Reduced from 15 to 10 tracks
       const tracks = [
-        { title: 'Aami Thakar Thakar', artist: 'Avadhoot Gupte', duration: '3:12' },
+        { title: 'Shoor Amhi Sardar', artist: 'Ajay-Atul', duration: '3:55' },
+        { title: 'Aga Aga Pori Faslis Ga', artist: 'Suresh Wadkar', duration: '4:24' },
         { title: 'Bai Bai Manmoracha', artist: 'Ajay-Atul', duration: '5:24' },
         { title: 'Dis Jatil Dis Yetil', artist: 'Avdhoot Gupte', duration: '4:05' },
-        { title: 'Ekach Hya Janmi Janu', artist: 'Sonu Nigam', duration: '5:22' },
         { title: 'Hi Chaal Turu Turu', artist: 'Shankar Mahadevan', duration: '4:15' },
-        { title: 'Hi Navri Asli', artist: 'Ajay-Atul', duration: '5:05' },
-        { title: 'Labhale Aamhas Bhagya', artist: 'Ajay-Atul', duration: '8:15' },
+        { title: 'Ekach Hya Janmi Janu', artist: 'Sonu Nigam', duration: '5:22' },
         { title: 'Reshmachya Reghani', artist: 'Shreya Ghoshal', duration: '4:30' },
-        { title: 'Ruperi Valut Madanchya Banaat', artist: 'Shreya Ghoshal', duration: '4:45' },
-        { title: 'Shoor Amhi Sardar', artist: 'Ajay-Atul', duration: '3:55' }
+        { title: 'Hi Navri Asli', artist: 'Ajay-Atul', duration: '5:05' },
+        { title: 'Jambhul Pikalya Zadakhali', artist: 'Asha Bhosle; Ravindra', duration: '4:13' },
+        { title: 'Labhale Aamhas Bhagya', artist: 'Ajay-Atul', duration: '8:15' }
       ];
       
       // Create HTML for each track with renamed files
