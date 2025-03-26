@@ -505,7 +505,7 @@ function loadPlaylistTracks(playlistId) {
         { title: 'Husn', artist: 'Anuv Jain', duration: '3:37' },
         { title: 'Jo Tum Mere Ho', artist: 'Anuv Jain', duration: '4:11' },
         { title: 'Lambiya Judaiyan', artist: 'Bilal Saeed', duration: '3:12' },
-        { title: 'Tum Ho', artist: 'Mohit Chauhan', duration: '5:16' },
+        { title: 'Maula Mere Maula', artist: 'Roop Kumar Rathod', duration: '6:04' },
         { title: 'Naina (From "Crew")', artist: 'Diljit Dosanjh; Badshah; Raj Ranjodh', duration: '3:00' }
       ];
       
