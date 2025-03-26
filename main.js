@@ -167,6 +167,9 @@ trackItems.forEach((track, index) => {
   });
 });
 
+// Add a preload audio element for the next track
+const preloadAudioElement = new Audio();
+
 // Function to play a track
 function playTrack(trackElement) {
   // Update UI for currently playing track
@@ -204,8 +207,20 @@ function playTrack(trackElement) {
     trackArtElement.innerHTML = '<span class="track-art-emoji">🎵</span>';
   }
   
+  // Show loading indicator
+  const loadingIndicator = document.createElement('div');
+  loadingIndicator.className = 'loading-indicator';
+  loadingIndicator.textContent = 'Loading...';
+  trackElement.appendChild(loadingIndicator);
+  
+  // Update buffer progress indicator
+  document.querySelector('.progress-container').classList.add('loading');
+  
   // Set the audio source and play
   audioElement.src = trackSrc;
+  
+  // Listen for buffering progress
+  audioElement.addEventListener('progress', updateBufferProgress);
   
   // Start playing the track
   audioElement.play().catch(error => {
@@ -219,7 +234,20 @@ function playTrack(trackElement) {
     if (error.name === 'NotSupportedError') {
       trackElement.classList.remove('playing');
     }
+    
+    // Remove loading indicator
+    trackElement.querySelector('.loading-indicator')?.remove();
+    document.querySelector('.progress-container').classList.remove('loading');
   });
+  
+  // Remove loading indicator when playback starts
+  audioElement.onplaying = () => {
+    trackElement.querySelector('.loading-indicator')?.remove();
+    document.querySelector('.progress-container').classList.remove('loading');
+    
+    // Preload the next track
+    preloadNextTrack();
+  };
   
   // Enable player controls
   playPauseButton.disabled = false;
@@ -234,6 +262,44 @@ function playTrack(trackElement) {
   // Update current track index for next/prev functionality
   const trackItems = Array.from(document.querySelectorAll('.track-item'));
   currentTrackIndex = trackItems.indexOf(trackElement);
+}
+
+// Function to update buffer progress
+function updateBufferProgress() {
+  if (!audioElement.buffered.length) return;
+  
+  const bufferedEnd = audioElement.buffered.end(audioElement.buffered.length - 1);
+  const duration = audioElement.duration;
+  const bufferedPercent = (bufferedEnd / duration) * 100;
+  
+  // Update buffer progress bar
+  const bufferBar = document.querySelector('.buffer-progress');
+  if (bufferBar) {
+    bufferBar.style.width = `${bufferedPercent}%`;
+  }
+}
+
+// Function to preload the next track
+function preloadNextTrack() {
+  const trackItems = Array.from(document.querySelectorAll('.track-item'));
+  if (trackItems.length === 0) return;
+  
+  // Calculate the index of the next track
+  const nextIndex = (currentTrackIndex + 1) % trackItems.length;
+  
+  // Get the next track element
+  const nextTrack = trackItems[nextIndex];
+  if (nextTrack) {
+    // Get the source URL of the next track
+    const nextTrackSrc = nextTrack.dataset.src;
+    
+    // Set it as the source of the preload audio element
+    preloadAudioElement.src = nextTrackSrc;
+    
+    // Begin loading the audio file
+    preloadAudioElement.load();
+    console.log(`Preloading next track: ${nextTrackSrc}`);
+  }
 }
 
 // Next and Previous buttons
@@ -564,4 +630,12 @@ function checkAudioFileStatus(url) {
     };
     http.send();
   });
+}
+
+// Create buffer progress bar if it doesn't exist
+if (!document.querySelector('.buffer-progress')) {
+  const progressBar = document.querySelector('.progress-bar');
+  const bufferProgress = document.createElement('div');
+  bufferProgress.className = 'buffer-progress';
+  progressBar.insertBefore(bufferProgress, progressBar.firstChild);
 }

@@ -403,6 +403,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 }
 
 .track-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -785,4 +786,43 @@ body.no-scroll {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #7f7f7f;
+}
+
+/* Loading indicator */
+.loading-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Buffer progress bar */
+.buffer-progress {
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.progress-container.loading .progress-bar {
+  animation: loading-pulse 1.5s infinite;
+}
+
+@keyframes loading-pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }
