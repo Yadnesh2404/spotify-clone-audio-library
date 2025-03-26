@@ -455,8 +455,8 @@ function loadPlaylistTracks(playlistId) {
   // Create mapping of playlist descriptions
   const descriptions = {
     'hip-hop': 'Hip Hop tracks collection',
-    'bollywood-hits': 'Popular Bollywood songs',
-    'marathi-hits': 'Best Marathi songs collection',
+    'bollywood-hits': 'Popular Bollywood songs - Selected Top Hits',
+    'marathi-hits': 'Best Marathi songs collection - Selected Top Hits',
     'playlist4': 'Add your custom tracks to Playlist 4'
   };
   
@@ -496,20 +496,16 @@ function loadPlaylistTracks(playlistId) {
         createTrackElementWithNumberedFile(track, index, playlistId);
       });
     } else if (playlistId === 'bollywood-hits') {
+      // Reduced from 14 to 9 tracks
       const tracks = [
         { title: 'Apna Bana Le', artist: 'Arijit Singh', duration: '4:25' },
         { title: 'Baarishein', artist: 'Anuv Jain', duration: '3:30' },
-        { title: 'Dekhha Tenu (From "Mr. And Mrs. Mahi")', artist: 'Vishal Mishra', duration: '4:40' },
         { title: 'Heeriye (feat. Arijit Singh)', artist: 'Jasleen Royal', duration: '3:13' },
-        { title: 'Husn', artist: 'Anuv Jain', duration: '3:37' },
         { title: 'Jo Tum Mere Ho', artist: 'Arijit Singh', duration: '4:10' },
-        { title: 'Lambiya Judaiyan', artist: 'Anuv Jain', duration: '3:12' },
         { title: 'Maula Mere Maula', artist: 'Roop Kumar Rathod', duration: '6:03' },
-        { title: 'Naina (From "Crew")', artist: 'Vishal Mishra', duration: '3:01' },
         { title: 'O Meri Laila', artist: 'Atif Aslam', duration: '4:40' },
         { title: 'Softly', artist: 'Karan Aujla', duration: '2:36' },
         { title: 'Suniyan Suniyan', artist: 'Arijit Singh', duration: '3:17' },
-        { title: 'Tainu Khabar Nahi - From "Munjya"', artist: 'Arijit Singh', duration: '3:09' },
         { title: 'Tum Ho', artist: 'Mohit Chauhan', duration: '5:16' }
       ];
       
@@ -518,21 +514,17 @@ function loadPlaylistTracks(playlistId) {
         createTrackElementWithNumberedFile(track, index, playlistId);
       });
     } else if (playlistId === 'marathi-hits') {
+      // Reduced from 15 to 10 tracks
       const tracks = [
         { title: 'Aami Thakar Thakar', artist: 'Avadhoot Gupte', duration: '3:12' },
-        { title: 'Aga Aga Pori Faslis Ga', artist: 'Pravin Kunwar', duration: '3:45' },
         { title: 'Bai Bai Manmoracha', artist: 'Ajay-Atul', duration: '5:24' },
         { title: 'Dis Jatil Dis Yetil', artist: 'Avdhoot Gupte', duration: '4:05' },
-        { title: 'Ek Dhaga Sukhacha', artist: 'Ajay-Atul', duration: '4:38' },
         { title: 'Ekach Hya Janmi Janu', artist: 'Sonu Nigam', duration: '5:22' },
         { title: 'Hi Chaal Turu Turu', artist: 'Shankar Mahadevan', duration: '4:15' },
         { title: 'Hi Navri Asli', artist: 'Ajay-Atul', duration: '5:05' },
-        { title: 'Jambhul Pikalya Zadakhali', artist: 'Traditional', duration: '3:25' },
         { title: 'Labhale Aamhas Bhagya', artist: 'Ajay-Atul', duration: '8:15' },
-        { title: 'Mendichya Panavar - 1971', artist: 'Asha Bhosle', duration: '2:30' },
         { title: 'Reshmachya Reghani', artist: 'Shreya Ghoshal', duration: '4:30' },
         { title: 'Ruperi Valut Madanchya Banaat', artist: 'Shreya Ghoshal', duration: '4:45' },
-        { title: 'Shatada Prem Karave', artist: 'Lata Mangeshkar', duration: '4:20' },
         { title: 'Shoor Amhi Sardar', artist: 'Ajay-Atul', duration: '3:55' }
       ];
       
