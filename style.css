@@ -320,7 +320,7 @@ body {
 
 .time-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   color: var(--text-secondary);
   font-size: 0.75rem;
   padding: 0 4px;
