@@ -66,5 +66,5 @@ npm run build
 The build files will be generated in the `dist` directory.
 
 ## License
-
+<br>
 This project is open source and available under the MIT License. 
