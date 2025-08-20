@@ -13,7 +13,7 @@ const playerControls = document.querySelector('.player-controls');
 let isPlaying = false;
 let currentPlaylist = 'hip-hop'; // Default playlist
 let useRenamedFiles = true; // Set to true to use track1.mp3, track2.mp3, etc.
-
+let currentTrackIndex = 0;
 // Create custom player controls
 playerControls.innerHTML = `
   <div class="progress-container">
